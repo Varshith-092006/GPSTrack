@@ -50,7 +50,7 @@ export default function App() {
   async function getAddress() {
     if (!initial) { alert('Location not ready'); return; }
     const {lat, lng} = initial;
-    const url = `https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${lat},${lng}&no_annotations=1`;
+    const url = `https://api.opencagedata.com/geocode/v1/json?key=${apikey}&q=${lat},${lng}&no_annotations=1`;
     try {
       const res = await fetch(url);
       const js  = await res.json();
